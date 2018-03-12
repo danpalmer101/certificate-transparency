@@ -24,13 +24,23 @@ import static org.junit.Assert.*;
 public class CTTrustManagerTest {
 
     @Test
-    public void testGoodCertificate() {
+    public void testValid() {
         testConnection("https://sha256.badssl.com", null);
     }
 
     @Test
     public void testInvalidExpectedSct() {
         testConnection("https://invalid-expected-sct.badssl.com", SSLHandshakeException.class);
+    }
+
+    @Test
+    public void testInvalidExpired() {
+        testConnection("https://expired.badssl.com", SSLHandshakeException.class);
+    }
+
+    @Test
+    public void testInvalidSelfSigned() {
+        testConnection("https://self-signed.badssl.com", SSLHandshakeException.class);
     }
 
     private void testConnection(final String url, final Class expectedException) {
@@ -56,7 +66,7 @@ public class CTTrustManagerTest {
         try {
             Response response = client.newCall(request).execute();
 
-            assertNull("Expected " + expectedException, expectedException);
+            assertEquals("Incorrect response", expectedException, null);
             assertTrue("Expected successful response", response.isSuccessful());
         } catch (IOException e) {
             assertEquals("Unexpected exception", expectedException, e.getClass());
