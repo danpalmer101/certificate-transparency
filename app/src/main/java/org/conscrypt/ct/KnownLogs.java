@@ -17,12 +17,11 @@
 /*
  * Copyright (C) 2018 Daniel Palmer
  *
- * All known logs from https://www.gstatic.com/ct/log_list/all_logs_list.json as of 7th March 2018 added
+ * Updated list to all Google and Symantec run logs from
+ * https://www.gstatic.com/ct/log_list/all_logs_list.json as of 7th March 2018
  */
 
 package org.conscrypt.ct;
-
-import android.util.Base64;
 
 import org.conscrypt.Internal;
 
@@ -31,127 +30,123 @@ import org.conscrypt.Internal;
  */
 @Internal
 public final class KnownLogs {
-    public static final int LOG_COUNT = 27;
+    public static final int LOG_COUNT = 12;
     public static final String[] LOG_DESCRIPTIONS = new String[]{
-        "Google 'Argon2018' log",
-        "Google 'Argon2019' log",
-        "Google 'Argon2020' log",
-        "Google 'Argon2021' log",
-        "Google 'Aviator' log",
-        "Google 'Icarus' log",
-        "Google 'Pilot' log",
-        "Google 'Rocketeer' log",
-        "Google 'Skydiver' log",
-        "Cloudflare 'Nimbus2018' Log",
-        "Cloudflare 'Nimbus2019' Log",
-        "Cloudflare 'Nimbus2020' Log",
-        "Cloudflare 'Nimbus2021' Log",
-        "DigiCert Log Server",
-        "DigiCert Log Server 2",
-        "Symantec log",
-        "Symantec 'Vega' log",
-        "Symantec 'Sirius' log",
-        "Certly.IO log",
-        "Izenpe log",
-        "WoSign log",
-        "Venafi log",
-        "Venafi Gen2 CT log",
-        "CNNIC CT log",
-        "StartCom log",
-        "Comodo 'Sabre' CT log",
-        "Comodo 'Mammoth' CT log"
+            "Google 'Argon2018' log",
+            "Google 'Argon2019' log",
+            "Google 'Argon2020' log",
+            "Google 'Argon2021' log",
+            "Google 'Aviator' log",
+            "Google 'Icarus' log",
+            "Google 'Pilot' log",
+            "Google 'Rocketeer' log",
+            "Google 'Skydiver' log",
+            "Symantec log",
+            "Symantec 'Vega' log",
+            "Symantec 'Sirius' log"
     };
     public static final String[] LOG_URLS = new String[]{
-        "ct.googleapis.com/logs/argon2018/",
-        "ct.googleapis.com/logs/argon2019/",
-        "ct.googleapis.com/logs/argon2020/",
-        "ct.googleapis.com/logs/argon2021/",
-        "ct.googleapis.com/aviator/",
-        "ct.googleapis.com/icarus/",
-        "ct.googleapis.com/pilot/",
-        "ct.googleapis.com/rocketeer/",
-        "ct.googleapis.com/skydiver/",
-        "ct.cloudflare.com/logs/nimbus2018/",
-        "ct.cloudflare.com/logs/nimbus2019/",
-        "ct.cloudflare.com/logs/nimbus2020/",
-        "ct.cloudflare.com/logs/nimbus2021/",
-        "ct1.digicert-ct.com/log/",
-        "ct2.digicert-ct.com/log/",
-        "ct.ws.symantec.com/",
-        "vega.ws.symantec.com/",
-        "sirius.ws.symantec.com/",
-        "log.certly.io/",
-        "ct.izenpe.com/",
-        "ctlog.wosign.com/",
-        "ctlog.api.venafi.com/",
-        "ctlog-gen2.api.venafi.com/",
-        "ctserver.cnnic.cn/",
-        "ct.startssl.com/",
-        "sabre.ct.comodo.com/",
-        "mammoth.ct.comodo.com/"
+            "ct.googleapis.com/logs/argon2018/",
+            "ct.googleapis.com/logs/argon2019/",
+            "ct.googleapis.com/logs/argon2020/",
+            "ct.googleapis.com/logs/argon2021/",
+            "ct.googleapis.com/aviator/",
+            "ct.googleapis.com/icarus/",
+            "ct.googleapis.com/pilot/",
+            "ct.googleapis.com/rocketeer/",
+            "ct.googleapis.com/skydiver/",
+            "ct.ws.symantec.com/",
+            "vega.ws.symantec.com/",
+            "sirius.ws.symantec.com/"
     };
     public static final byte[][] LOG_KEYS = new byte[][]{
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE0gBVBa3VR7QZu82V+ynXWD14JM3ORp37MtR"
-                + "xTmACJV5ZPtfUA7htQ2hofuigZQs+bnFZkje+qejxoyvk2Q1VaA==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEI3MQm+HzXvaYa2mVlhB4zknbtAT8cSxakmB"
-                + "oJcBKGqGwYS0bhxSpuvABM1kdBTDpQhXnVdcq+LSiukXJRpGHVg==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE6Tx2p1yKY4015NyIYvdrk36es0uAc1zA4PQ"
-                + "+TGRY+3ZjUTIYY9Wyu+3q/147JG4vNVKLtDWarZwVqGkg6lAYzA==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAETeBmZOrzZKo4xYktx9gI2chEce3cw/tbr5x"
-                + "koQlmhB18aKfsxD+MnILgGNl0FOm0eYGilFVi85wLRIOhK8lxKw==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE1/TMabLkDpCjiupacAlP7xNi0I1JYP8bQFA"
-                + "HDG1xhtolSY1l4QgNRzRrvSe8liE+NPWHdjGxfx3JhTsN9x8/6Q==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAETtK8v7MICve56qTHHDhhBOuV4IlUaESxZry"
-                + "Cfk9QbG9co/CqPvTsgPDbCpp6oFtyAHwlDhnvr7JijXRD9Cb2FA==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfahLEimAoz2t01p3uMziiLOl/fHTDM0YDOh"
-                + "BRuiBARsV4UvxG2LdNgoIGLrtCzWE0J5APC2em4JlvR8EEEFMoA==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIFsYyDzBi7MxCAC/oJBXK7dHjG+1aLCOkHj"
-                + "poHPqTyghLpzA9BYbqvnV16mAw04vUjyYASVGJCUoI3ctBcJAeg==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEmyGDvYXsRJsNyXSrYc9DjHsIa2xzb4UR7Z"
-                + "xVoV6mrc9iZB7xjI6+NrOiwH+P/xxkRmOFG6Jel20q37hTh58rA==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAsVpWvrH3Ke0VRaMg9ZQoQjb5g/xh1z3DDa"
-                + "6IuxY5DyPsk6brlvrUNXZzoIg0DcvFiAn2kd6xmu4Obk5XA/nRg==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkZHz1v5r8a9LmXSMegYZAg4UW+Ug56GtNfJ"
-                + "TDNFZuubEJYgWf4FcC5D+ZkYwttXTDSo4OkanG9b3AI4swIQ28g==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE01EAhx4o0zPQrXTcYjgCt4MVFsT0Pwjzb1R"
-                + "wrM0lhWDlxAYPP6/gyMCXNkOn/7KFsjL7rwk78tHMpY8rXn8AYg==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExpon7ipsqehIeU1bmpog9TFo4Pk8+9oN8OY"
-                + "Hl1Q2JGVXnkVFnuuvPgSo2Ep+6vLffNLcmEbxOucz03sFiematg==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAkbFvhu7gkAW6MHSrBlpE1n4+HCFRkC5OLA"
-                + "jgqhkTH+/uzSfSl8ois8ZxAD2NgaTZe1M9akhYlrYkes4JECs6A==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzF05L2a4TH/BLgOhNKPoioYCrkoRxvcmaje"
-                + "b8Dj4XQmNY+gxa4Zmz3mzJTwe33i0qMVp+rfwgnliQ/bM/oFmhA==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEluqsHEYMG1XcDfy1lCdGV0JwOmkY4r87xNu"
-                + "roPS2bMBTP01CEDPwWJePa75y9CrsHEKqAy8afig1dpkIPSEUhg==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE6pWeAv/u8TNtS4e8zf0ZF2L/lNPQWQc/Ai0"
-                + "ckP7IRzA78d0NuBEMXR2G3avTK0Zm+25ltzv9WWis36b4ztIYTQ==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEowJkhCK7JewN47zCyYl93UXQ7uYVhY/Z5xc"
-                + "bE4Dq7bKFN61qxdglnfr0tPNuFiglN+qjN2Syxwv9UeXBBfQOtQ==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAECyPLhWKYYUgEc+tUXfPQB4wtGS2MNvXrjwF"
-                + "CCnyYJifBtd2Sk7Cu+Js9DNhMTh35FftHaHu6ZrclnNBKwmbbSA==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEJ2Q5DC3cUBj4IQCiDu0s6j51up+TZAkAEcQ"
-                + "RF6tczw90rLWXkJMAW7jr9yc92bIKgV8vDXU4lDeZHvYHduDuvg==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzBGIey1my66PTTBmJxklIpMhRrQvAdPG+Sv"
-                + " VyLpzmwai8IoCnNBrRhgwhbrpJIsO0VtwKAx+8TpFf1rzgkJgMQ==", 0),
-        Base64.decode("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAolpIHxdSlTXLo1s6H1OCdpSj/4D"
-                + "yHDc8wLG9wVmLqy1lk9fz4ATVmm+/1iN2Nk8jmctUKK2MFUtlWXZBSpym97M7frGlSaQXUWyA3CqQUE"
-                + "uIJOmlEjKTBEiQAvpfDjCHjlV2Be4qTM6jamkJbiWtgnYPhJL6ONaGTiSPm7Byy57iaz/hbckldSOIo"
-                + "RhYBiMzeNoA0DiRZ9KmfSeXZ1rB8y8X5urSW+iBzf2SaOfzBvDpcoTuAaWx2DPazoOl28fP1hZ+kHUY"
-                + "vxbcMjttjauCFx+JII0dmuZNIwjfeG/GBb9frpSX219k1O4Wi6OEbHEr8at/XQ0y7gTikOxBn/s5wQI"
-                + "DAQAB", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjicnerZVCXTrbEuUhGW85BXx6lrYfA43zro"
-                + "/bAna5ymW00VQb94etBzSg4j/KS/Oqf/fNN51D8DMGA2ULvw3AQ==", 0),
-        Base64.decode("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv7UIYZopMgTTJWPp2IXhhuAf1l6"
-                + "a9zM7gBvntj5fLaFm9pVKhKYhVnno94XuXeN8EsDgiSIJIj66FpUGvai5samyetZhLocRuXhAiXXbDN"
-                + "yQ4KR51tVebtEq2zT0mT9liTtGwiksFQccyUsaVPhsHq9gJ2IKZdWauVA2Fm5x9h8B9xKn/L/2IaMpk"
-                + "IYtd967TNTP/dLPgixN1PLCLaypvurDGSVDsuWabA3FHKWL9z8wr7kBkbdpEhLlg2H+NAC+9nGKx+tQ"
-                + "kuhZ/hWR65aX+CNUPy2OB9/u2rNPyDydb988LENXoUcMkQT0dU3aiYGkFAY0uZjD2vH97TM20xYtNQI"
-                + "DAQAB", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESPNZ8/YFGNPbsu1Gfs/IEbVXsajWTOaft0o"
-                + "aFIZDqUiwy1o/PErK38SCFFWa+PeOQFXc9NKv6nV0+05/YIYuUQ==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE8m/SiQ8/xfiHHqtls9m7FyOMBg4JVZY9Cgi"
-                + "ixXGz0akvKD6DEL8S0ERmFe9U4ZiA0M4kbT5nmuk3I85Sk4bagA==", 0),
-        Base64.decode("MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE7+R9dC4VFbbpuyOL+yy14ceAmEf7QGlo/Em"
-                + "tYU6DRzwat43f/3swtLr/L8ugFOOt1YU/RFmMjGCL17ixv66MZw==", 0)
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, -46, 0, 85, 5, -83, -43, 71, -76, 25, -69, -51, -107, -5,
+                    41, -41, 88, 61, 120, 36, -51, -50, 70, -99, -5, 50, -44, 113, 78, 96, 2, 37,
+                    94, 89, 62, -41, -44, 3, -72, 109, 67, 104, 104, 126, -24, -96, 101, 11, 62,
+                    110, 113, 89, -110, 55, -66, -87, -24, -15, -93, 43, -28, -39, 13, 85, 104
+            },
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, 35, 115, 16, -101, -31, -13, 94, -10, -104, 107, 105,
+                    -107, -106, 16, 120, -50, 73, -37, -76, 4, -4, 113, 44, 90, -110, 96, 104, 37,
+                    -64, 74, 26, -95, -80, 97, 45, 27, -121, 20, -87, -70, -16, 1, 51, 89, 29, 5,
+                    48, -23, 66, 21, -25, 85, -41, 42, -8, -76, -94, -70, 69, -55, 70, -111, -121,
+                    86
+            },
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, -23, 60, 118, -89, 92, -118, 99, -115, 53, -28, -36, -120,
+                    98, -9, 107, -109, 126, -98, -77, 75, -128, 115, 92, -64, -32, -12, 62, 76, 100,
+                    88, -5, 118, 99, 81, 50, 24, 99, -43, -78, -69, -19, -22, -1, 94, 59, 36, 110,
+                    47, 53, 82, -117, -76, 53, -102, -83, -100, 21, -88, 105, 32, -22, 80, 24, -52
+            },
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, 77, -32, 102, 100, -22, -13, 100, -86, 56, -59, -119, 45,
+                    -57, -40, 8, -39, -56, 68, 113, -19, -36, -61, -5, 91, -81, -100, 100, -95, 9,
+                    102, -124, 29, 124, 104, -89, -20, -60, 63, -116, -100, -126, -32, 24, -39, 116,
+                    20, -23, -76, 121, -127, -94, -108, 85, 98, -13, -100, 11, 68, -125, -95, 43,
+                    -55, 113, 43
+            },
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, -41, -12, -52, 105, -78, -28, 14, -112, -93, -118, -22,
+                    90, 112, 9, 79, -17, 19, 98, -48, -115, 73, 96, -1, 27, 64, 80, 7, 12, 109, 113,
+                    -122, -38, 37, 73, -115, 101, -31, 8, 13, 71, 52, 107, -67, 39, -68, -106, 33,
+                    62, 52, -11, -121, 118, 49, -79, 127, 29, -55, -123, 59, 13, -9, 31, 63, -23
+            },
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, 78, -46, -68, -65, -77, 8, 10, -9, -71, -22, -92, -57, 28,
+                    56, 97, 4, -21, -107, -32, -119, 84, 104, 68, -79, 102, -68, -126, 126, 79, 80,
+                    108, 111, 92, -93, -16, -86, 62, -12, -20, -128, -16, -37, 10, -102, 122, -96,
+                    91, 114, 0, 124, 37, 14, 25, -17, -81, -78, 98, -115, 116, 67, -12, 38, -10, 20
+            },
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, 125, -88, 75, 18, 41, -128, -93, 61, -83, -45, 90, 119,
+                    -72, -52, -30, -120, -77, -91, -3, -15, -45, 12, -51, 24, 12, -24, 65, 70, -24,
+                    -127, 1, 27, 21, -31, 75, -15, 27, 98, -35, 54, 10, 8, 24, -70, -19, 11, 53,
+                    -124, -48, -98, 64, 60, 45, -98, -101, -126, 101, -67, 31, 4, 16, 65, 76, -96
+            },
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, 32, 91, 24, -56, 60, -63, -117, -77, 49, 8, 0, -65, -96,
+                    -112, 87, 43, -73, 71, -116, 111, -75, 104, -80, -114, -112, 120, -23, -96, 115,
+                    -22, 79, 40, 33, 46, -100, -64, -12, 22, 27, -86, -7, -43, -41, -87, -128, -61,
+                    78, 47, 82, 60, -104, 1, 37, 70, 36, 37, 40, 35, 119, 45, 5, -62, 64, 122
+            },
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, 18, 108, -122, 14, -10, 23, -79, 18, 108, 55, 37, -46,
+                    -83, -121, 61, 14, 49, -20, 33, -83, -79, -51, -66, 20, 71, -74, 113, 86, -123,
+                    122, -102, -73, 61, -119, -112, 123, -58, 50, 58, -8, -38, -50, -117, 1, -2, 63,
+                    -4, 113, -111, 25, -114, 20, 110, -119, 122, 93, -76, -85, 126, -31, 78, 30,
+                    124, -84
+            },
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, -106, -22, -84, 28, 70, 12, 27, 85, -36, 13, -4, -75,
+                    -108, 39, 70, 87, 66, 112, 58, 105, 24, -30, -65, 59, -60, -37, -85, -96, -12,
+                    -74, 108, -64, 83, 63, 77, 66, 16, 51, -16, 88, -105, -113, 107, -66, 114, -12,
+                    42, -20, 28, 66, -86, 3, 47, 26, 126, 40, 53, 118, -103, 8, 61, 33, 20, -122
+            },
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, -22, -107, -98, 2, -1, -18, -15, 51, 109, 75, -121, -68,
+                    -51, -3, 25, 23, 98, -1, -108, -45, -48, 89, 7, 63, 2, 45, 28, -112, -2, -56,
+                    71, 48, 59, -15, -35, 13, -72, 17, 12, 93, 29, -122, -35, -85, -45, 43, 70, 102,
+                    -5, 110, 101, -73, 59, -3, 89, 104, -84, -33, -90, -8, -50, -46, 24, 77
+            },
+            new byte[] {
+                    48, 89, 48, 19, 6, 7, 42, -122, 72, -50, 61, 2, 1, 6, 8, 42, -122, 72, -50, 61,
+                    3, 1, 7, 3, 66, 0, 4, -93, 2, 100, -124, 34, -69, 37, -20, 13, -29, -68, -62,
+                    -55, -119, 125, -35, 69, -48, -18, -26, 21, -123, -113, -39, -25, 23, 27, 19,
+                    -128, -22, -19, -78, -123, 55, -83, 106, -59, -40, 37, -99, -6, -12, -76, -13,
+                    110, 22, 40, 37, 55, -22, -93, 55, 100, -78, -57, 11, -3, 81, -27, -63, 5, -12,
+                    14, -75
+            }
     };
 }
